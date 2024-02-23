@@ -1,27 +1,161 @@
-/* codecadamy PROJECT 7 : 
+/* My Website : Last Updated 02/23/24
 
 */
 
-* {
-  font-family: Helvetica;
+/* Universal Styles */
+html {
+  font-size: 16px;
+  background-color: #d3e0d8;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Banner */
+#banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 6rem;
+  padding: 0;
+  margin: 0;
+  background-image: url('https://static.vecteezy.com/system/resources/previews/002/757/595/original/cyber-circuit-future-technology-concept-background-free-vector.jpg');
+  background-position: center 1.5%; /* Center the background image and chose display section*/
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+#banner h1 {
+  font-family: "Cinzel", cursive;
+  font-size: 4rem;
+  color: white;
+  margin-top: 0;
+  text-align: center;
+}
+
+/* Navigation Menu */
+nav {
+  top: 90px;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  left: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  display: inline-block;
+  padding: 1rem 2rem;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*Links*/
+.bio-content a:hover {
+  background-color: #91cafd;
+}
+
+.bio-content a {
+  color: blue;
+}
+
+/* Bio Section */
+#bio {
+  display: flex;
+  flex-wrap: wrap; /* Allow flex items to wrap */
+  padding: 10rem 15% 3rem 15%; /* Reduce bottom padding to reduce the gap */
+}
+
+#bio .image-container {
+  flex: 0 0 30%; /* Set flex basis to 30% */
+  max-width: 30%; /* Set maximum width to 30% */
+}
+
+#bio .image-container img {
+  display: block;
+  max-width: 100%;
+}
+
+#bio .bio-content {
+  flex: 1; /* Let bio content take up remaining space */
+  padding-left: 3rem; /* Add padding to separate text from image */
+}
+
+#bio .bio-content p {
+  font-family: "Charm", serif;
+  font-size: 25px;
+  color: black;
+}
+
+/* Bio Notes */
+.bio-notes {
+  flex: 1; /* Let bio notes take up remaining space */
+  padding: 0 15%; /* Adjust padding to match the padding of the bio section */
+}
+
+.bio-notes p {
+  line-height: 1.5; /* Adjust line height for better readability */
+  font-size: 1rem; /* Adjust font size */
+  color: #333; /* Adjust text color */
+  margin-top: 0.5rem; /* Reduce top margin for minimal gap */
+}
+
+
+/* Projects Section */
+#projects {
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly along the main axis */
+  align-items: flex-start; /* Align items at the start of the cross axis */
+  padding: 3rem 15%; /* Adjust padding as needed */
+}
+
+#projects .python,
+#projects .web-design,
+#projects .portfolio {
+  flex: 0 0 30%; /* Each item takes up 30% of the available space */
+}
+
+#projects img {
+  width: 100%; /* Ensure images take up full width of their container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+#projects p {
+  margin-top: 1rem; /* Add margin between image and title */
+  text-align: center; /* Center-align the title */
+  font-family: "Cinzel", cursive;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
 
-h1 {
-  color: white; /* Set the color of the text to make it visible */
-  font-size: 50px;
-  text-align: center;
-  text-shadow: -1px -1px 0 black,  
-               1px -1px 0 black,
-              -1px  1px 0 black,
-               1px  1px 0 black; /* Create the black outline */
-  background-image: url('https://static.vecteezy.com/system/resources/previews/001/338/684/original/blue-cyber-circuit-future-technology-background-vector.jpg');
-  background-size: cover; /* or contain, depending on your preference */
-  background-position: 50% 25%; /* adjust as needed */
-}
 
-
-p {
-  font-weight: 700;
+@media only screen and (max-width: 560px) {
+  footer {
+    padding: 4.8125rem 15% 0 15%;
+  }
 }
