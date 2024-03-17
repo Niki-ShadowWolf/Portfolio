@@ -1,4 +1,4 @@
-/*   My Website : Last updated 02/26/24  */
+/*   My Website : Last updated 03/17/24  */
 
 /* Universal Styles */
 html {
@@ -15,6 +15,15 @@ a {
   color: inherit;
 }
 
+h2 {
+  margin-top: 1rem; /* Add margin between image and title */
+  text-align: center; /* Center-align the title */
+  font-family: "Cinzel", cursive;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
 /* Banner */
 #banner {
   position: fixed;
@@ -39,16 +48,19 @@ a {
   text-align: center;
 }
 
+/*-----------------------------------------------------------------------------------------------------*/
 /* Navigation Menu */
+
 nav {
-  top: 90px;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.5);
+  top: 90px;
+  left: 0;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
   margin: 0;
   padding: 0;
-  left: 0;
+  z-index: 1000;
 }
 
 nav ul {
@@ -72,6 +84,7 @@ nav a:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+/*-----------------------------------------------------------------------------------------------------*/
 /*Links*/
 .bio-content a:hover {
   background-color: #91cafd;
@@ -96,11 +109,13 @@ nav a:hover {
 #bio .image-container img {
   display: block;
   max-width: 100%;
+  border-radius: 25%;
 }
 
 #bio .bio-content {
   flex: 1; /* Let bio content take up remaining space */
   padding-left: 3rem; /* Add padding to separate text from image */
+  min-width: 300px; /* Ensure a minimum width for bio content (Specifically for paragraph readability)*/
 }
 
 #bio .bio-content p {
@@ -128,13 +143,8 @@ nav a:hover {
 }
 
 
-h2 {
-  margin-top: 1rem; /* Add margin between image and title */
-  text-align: center; /* Center-align the title */
-  font-family: "Cinzel", cursive;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
+/*-----------------------------------------------------------------------------------------------------*/
+
 
 /*Everything above is good*/
 
@@ -145,42 +155,34 @@ h2 {
   padding: 3rem 5%; /* Adjust padding as needed */
 }
 
-#skillz > div { /*  targeting all the child div elements */
-  flex: 0 0 15%; /* Each item takes up 20% of the available space */
-  max-width: calc(50% - 20px); /* Set maximum width for each item */
-  margin: 10px; /* Add margin around each item */
+#skillz {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3rem 5%;
 }
 
-#skillz img {
-  width: 100%; /* Ensure images take up full width of their container */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 200px; /* Set maximum height for images */
-  object-fit: contain; /* Resize images to fit within container without cropping */
+.skill {
+    flex-basis: calc(100% / 6);
+    max-width: calc(16.6667% - 20px); /* 100% divided by 6 minus the margin */
+    margin: 10px;
+    box-sizing: border-box;
+    text-align: center; /* Center-align content */
 }
 
-#skillz p {
-  margin-top: 1rem; /* Add margin between image and title */
-  text-align: center; /* Center-align the title */
-  font-family: "Cinzel", cursive;
-  font-size: 1.5rem;
-  font-weight: bold;
+.skill img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
 }
-
-/* Media query for smaller screens */
-@media only screen and (max-width: 768px) {
-  #skillz > div {
-    flex: 0 0 20%; /* Each item takes up 30% of the available space */
-    max-width: calc(30% - 20px); /* Set maximum width for each item */
-  }
-}
-
-
-
-
 
 
 /*Everything below is good*/
 
+
+
+/*-----------------------------------------------------------------------------------------------------*/
 /* Projects Section */
 #projects {
   display: flex;
@@ -208,171 +210,7 @@ h2 {
   font-weight: bold;
 }
 
-footer {
-  text-align: center; /* Center-align the title */
-  font-family: "Cinzel", cursive;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-
-@media only screen and (max-width: 560px) {
-  footer {
-    padding: 4.8125rem 15% 0 15%;
-  }
-}
-/* Universal Styles */
-html {
-  font-size: 16px;
-  background-color: #d3e0d8;
-}
-
-body {
-  font-family: "Open Sans", sans-serif;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Banner */
-#banner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 6rem;
-  padding: 0;
-  margin: 0;
-  background-image: url('https://static.vecteezy.com/system/resources/previews/002/757/595/original/cyber-circuit-future-technology-concept-background-free-vector.jpg');
-  background-position: center 1.5%; /* Center the background image and chose display section*/
-  background-size: cover;
-  box-sizing: border-box;
-}
-
-#banner h1 {
-  font-family: "Cinzel", cursive;
-  font-size: 4rem;
-  color: white;
-  margin-top: 0;
-  text-align: center;
-}
-
-/* Navigation Menu */
-nav {
-  top: 90px;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  left: 0;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  display: inline;
-}
-
-nav a {
-  display: inline-block;
-  padding: 1rem 2rem;
-  color: white;
-  text-decoration: none;
-}
-
-nav a:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-/*Links*/
-.bio-content a:hover {
-  background-color: #91cafd;
-}
-
-.bio-content a {
-  color: blue;
-}
-
-/* Bio Section */
-#bio {
-  display: flex;
-  flex-wrap: wrap; /* Allow flex items to wrap */
-  padding: 10rem 15% 3rem 15%; /* Reduce bottom padding to reduce the gap */
-}
-
-#bio .image-container {
-  flex: 0 0 30%; /* Set flex basis to 30% */
-  max-width: 30%; /* Set maximum width to 30% */
-}
-
-#bio .image-container img {
-  display: block;
-  max-width: 100%;
-}
-
-#bio .bio-content {
-  flex: 1; /* Let bio content take up remaining space */
-  padding-left: 3rem; /* Add padding to separate text from image */
-}
-
-#bio .bio-content p {
-  font-family: "Charm", serif;
-  font-size: 25px;
-  color: black;
-}
-
-/* Bio Notes */
-.bio-notes {
-  flex: 1; /* Let bio notes take up remaining space */
-  padding: 0 15%; /* Adjust padding to match the padding of the bio section */
-}
-
-.bio-notes p {
-  line-height: 1.5; /* Adjust line height for better readability */
-  font-size: 1rem; /* Adjust font size */
-  color: #333; /* Adjust text color */
-  margin-top: 0.5rem; /* Reduce top margin for minimal gap */
-}
-
-
-/* Projects Section */
-#projects {
-  display: flex;
-  justify-content: space-between; /* Distribute items evenly along the main axis */
-  align-items: flex-start; /* Align items at the start of the cross axis */
-  padding: 3rem 15%; /* Adjust padding as needed */
-}
-
-#projects .python,
-#projects .web-design,
-#projects .portfolio {
-  flex: 0 0 30%; /* Each item takes up 30% of the available space */
-}
-
-#projects img {
-  width: 100%; /* Ensure images take up full width of their container */
-  height: auto; /* Maintain aspect ratio */
-}
-
-#projects p {
-  margin-top: 1rem; /* Add margin between image and title */
-  text-align: center; /* Center-align the title */
-  font-family: "Cinzel", cursive;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-
-
+/*-----------------------------------------------------------------------------------------------------*/
 footer {
   text-align: center; /* Center-align the title */
   font-family: "Cinzel", cursive;
