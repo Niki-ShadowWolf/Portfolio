@@ -177,6 +177,14 @@ nav a:hover {
     object-fit: contain;
 }
 
+#skillz p {
+  margin-top: 1rem; /* Add margin between image and title */
+  text-align: center; /* Center-align the title */
+  font-family: "Cinzel", cursive;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 
 /*Everything below is good*/
 
